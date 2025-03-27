@@ -84,3 +84,12 @@ const items = [
     img: "./img/12.jpeg",
   },
 ];
+
+function insertItems(items) {
+  const shopItemsContainer = document.getElementById('shop-items');
+  const itemTemplate = document.getElementById('item-template');
+
+}
+
+
+insertItems(items);
