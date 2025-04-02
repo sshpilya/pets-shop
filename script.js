@@ -106,15 +106,12 @@ function insertItems(items) {
         element.classList.add("tag");
         tagsHolder.appendChild(element);
       })
-
+      
       return item;
-    }
+  }
     items.forEach((shopItem) => {
         const shopItemElement = prepareShopItem(shopItem);
         shopItemsContainer.appendChild(shopItemElement);
       })
     }
   insertItems(items);
-
-
-  
