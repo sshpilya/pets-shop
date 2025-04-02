@@ -84,10 +84,10 @@ const items = [
     img: "./img/12.jpeg",
   },
 ];
+
 function insertItems(items) {
   const shopItemsContainer = document.getElementById("shop-items");
   const itemTemplate = document.getElementById("item-template");
-
 
   function prepareShopItem(shopItem) {
     const { title, description, tags, img, price } = shopItem;
@@ -106,7 +106,7 @@ function insertItems(items) {
         element.classList.add("tag");
         tagsHolder.appendChild(element);
       })
-      
+
       return item;
   }
     items.forEach((shopItem) => {
@@ -114,4 +114,5 @@ function insertItems(items) {
         shopItemsContainer.appendChild(shopItemElement);
       })
     }
+    
   insertItems(items);
