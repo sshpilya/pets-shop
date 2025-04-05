@@ -88,10 +88,9 @@ const items = [
 function insertItems(items) {
   const shopItemsContainer = document.getElementById("shop-items");
   const itemTemplate = document.getElementById("item-template");
-
-  function prepareShopItem(shopItem) {
-    const { title, description, tags, img, price } = shopItem;
-    const item = itemTemplate.content.cloneNode(true);
+function prepareShopItem(shopItem) {
+  const { title, description, tags, img, price } = shopItem;
+  const item = itemTemplate.content.cloneNode(true);
   
     item.querySelector("h1").textContent = title;
       item.querySelector("p").textContent = description;
