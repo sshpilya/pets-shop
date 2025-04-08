@@ -84,3 +84,36 @@ const items = [
     img: "./img/12.jpeg",
   },
 ];
+
+
+const shopItemsContainer = document.getElementById("shop-items");
+const itemTemplate = document.getElementById("item-template");
+  
+function prepareShopItem(shopItem) {
+  const { title, description, tags, img, price } = shopItem;
+  const item = itemTemplate.content.cloneNode(true);
+  
+    item.querySelector("h1").textContent = title;
+      item.querySelector("p").textContent = description;
+      item.querySelector("img").src = img;
+      item.querySelector(".price").textContent = `${price}P`;
+
+      const tagsHolder = item.querySelector(".tags");
+
+      tags.forEach((tag) => {
+        const element = document.createElement("span");
+        element.textContent = tag;
+        element.classList.add("tag");
+        tagsHolder.appendChild(element);
+      })
+
+      return item;
+  }
+  function insertItems(items) {
+    items.forEach((shopItem) => {
+        const shopItemElement = prepareShopItem(shopItem);
+        shopItemsContainer.appendChild(shopItemElement);
+      })
+  }
+    
+  insertItems(items);
